@@ -1,0 +1,425 @@
+/* styles.css */
+
+@font-face {
+    font-family: 'didact_gothicregular';
+    src: url('didactgothic-regular-webfont.woff2') format('woff2'),
+         url('didactgothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('Jost-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eb_garamonditalic';
+    src: url('ebgaramond-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('ebgaramond-italic-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eb_garamondregular';
+    src: url('ebgaramond-variablefont_wght-webfont.woff2') format('woff2'),
+         url('ebgaramond-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+:root {
+  --highlight-color: #0198a3; /* Define the main color using a CSS variable */
+  --hover-color-light: #3edde9;
+}
+
+/* Set the overall font family to Jost */
+body {
+    font-family: 'Jost';
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+ 
+  
+  /* Style the navigation bar */
+  header {
+    position: fixed;
+    left: 0px;
+    right: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Set the background color */
+    z-index: 999;
+    padding-top: 10px; /* Add some padding */
+    text-align: right;
+    top: 0;
+  }
+
+  footer {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    text-align: left;
+    padding-top: 100px; /* Add spacing at the top */
+    color: var(--highlight-color);
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Remove the default bullet points */
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+  }
+  
+  nav ul li {
+    display: inline-block; /* Display the navigation items horizontally */
+    margin-right: 10px; /* Add some spacing between the items */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Remove the default underline */
+    color: #333; /* Set the text color */
+    padding: 5px 10px; /* Add some padding */
+  }
+  
+  nav ul li a:hover {
+    background-color: #0198a3; /* Add a background color on hover */
+    color: #fff; /* Change the text color on hover */
+  }
+
+  .parallax-section {
+    min-height: 50vh; /* Set a minimum height to ensure full viewport coverage */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0vh;
+  }
+
+  .parallax-section:first-child h1 {
+    color: var(--hover-color-light); /* Change the color of the h1 element */
+  }
+  
+  .parallax-section:first-child p {
+    color: white; /* Change the color of the p element */
+  }
+  
+  
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 200px; /* Add spacing at the top */
+  }
+  
+  .container h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: var(--highlight-color);
+  }
+
+  .container h2 {
+    font-size: 32px;
+  }
+  
+  .container p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    hyphens: auto;
+    font-family: 'didact_gothicregular';
+    /*border-top: 2px solid var(--highlight-color);*/
+  }
+
+  .centeredtext {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+  }
+
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  
+
+.menu {
+    background-color: transparent; /* Set background color */
+    padding: 10px 0; /* Add padding to create separation line */
+  }
+  
+  .menu {
+    text-align: right;
+    border-bottom: 2px solid var(--highlight-color); /* Add blue separation line */
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  
+  .menu li {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+  }
+
+  .logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .logo .desktop-logo {
+    display: block;
+    margin-left: 10px;
+    width:  140px; /* Adjust the size of the desktop logo as needed */
+    height: auto;
+  }
+  
+  .logo .mobile-logo {
+    display: none;
+    width: 50px; /* Adjust the size of the mobile logo as needed */
+    height: auto;
+  }
+
+  a {
+    color: #0198a3; /* Set the link color */
+    text-decoration: none; /* Add underline to the link */
+  }
+  
+  a:hover {
+    color: var(--hover-color-light); /* Change the text color on hover */ 
+  }
+
+  .subblocks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .subblock {
+    background-color: rgba(204, 204, 204, 0.329);
+    padding: 20px;
+    background-size: cover;
+    color: rgb(61, 61, 61);
+    /*text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);*/
+    /*filter: contrast(0.8);*/
+  }
+
+  .banner {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%),
+                linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 110%);
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-form {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: grid;
+    gap: 5px;
+    max-width: 90%;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid var(--highlight-color);
+    /*border-radius: 4px;*/
+  }
+
+  .name-input,
+  .email-input {
+  max-width: 400px;
+  }
+  
+  button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #0198a3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  /*.subblock.subblock-image_01 {
+    background-image: url('tech_01.jpg');
+  }
+  
+  .subblock.subblock-image_02 {
+    background-image: url('tech_02.jpg');
+  }
+  .subblock.subblock-image_03 {
+    background-image: url('tech_03.jpg');
+  }
+  .subblock.subblock-image_04 {
+    background-image: url('tech_04.jpg');
+  }*/
+  
+@media (min-width: 1000px) {
+    .container {
+      max-width: 60%; /* Set the absolute max width for screens larger than 1200px */
+    }
+    .container h1 {
+      font-size: 80px; /* Font size for screens larger than 1024px */
+  }
+}
+
+  /* Styles for smaller screens */
+@media (max-width: 767px) {
+  .container p{
+    font-size: 16px;
+  }
+  
+    header {
+      padding: 10px;
+      border-bottom: 2px solid var(--highlight-color);
+    }
+  
+    nav ul {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+      text-align: left;
+    }
+  .menu {
+    display: none;
+    background-color: transparent; /* Set background color */
+    padding: 10px 0; /* Add padding to create separation line */
+    transition: max-height 0.3s ease;
+  }
+  
+  #menu-toggle.active + .menu {
+    display: block;
+  }
+  
+  .menu-icon {
+    display: unset;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--highlight-color);
+
+  }
+
+  /*.menu-icon:hover {
+    color: var(--hover-color-light);
+  }*/
+  
+  .menu {
+    text-align: center;
+    border-bottom: unset; /* Add blue separation line */
+  }
+  
+  .menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+  }
+
+  .logo .desktop-logo {
+    display: none;
+  }
+
+  .logo .mobile-logo {
+    display: block;
+  }
+
+  .subblocks-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
