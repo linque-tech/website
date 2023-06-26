@@ -116,7 +116,7 @@ body {
   }
   
   .parallax-section:first-child p {
-    color: white; /* Change the color of the p element */
+    color: black; /* Change the color of the p element */
   }
   
   
@@ -337,13 +337,13 @@ body {
     background-image: url('tech_04.jpg');
   }*/
   
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     .container {
       max-width: 60%; /* Set the absolute max width for screens larger than 1200px */
     }
     .container h1 {
       font-size: 80px; /* Font size for screens larger than 1024px */
-  }
+    }
 }
 
   /* Styles for smaller screens */
