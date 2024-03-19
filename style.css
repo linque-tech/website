@@ -105,13 +105,29 @@ body {
   }
 
   .parallax-section {
-    min-height: 100vh; /* Set a minimum height to ensure full viewport coverage */
+    min-height: 90vh; /* Set a minimum height to ensure full viewport coverage */
     position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 0vh;
+    padding-bottom: 10vh;
+  }
+  
+  /*.container-banner {
+    max-width: 40%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    margin: 10 auto;
+  }*/
+
+  .parallax-section-white {
+    background-color: white;
+  }
+
+  .parallax-section-lightblue {
+    background-color: rgb(235, 235, 235);
   }
 
   .parallax-section:first-child h1 {
@@ -125,22 +141,32 @@ body {
   
   .container {
     max-width: 90%;
+    /*max-height: 90%;*/
     margin: 0 auto;
     text-align: left;
     padding-top: 200px; /* Add spacing at the top */
   }
-  
+  /*.container p{
+    max-width: 80%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }*/
   .container h1 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1.2;
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 80px;
     color: var(--highlight-color);
   }
 
   .container h2 {
     font-size: 32px;
+  }
+
+  .container h3 {
+    text-align: center;
+    font-size: 22px;
   }
   
   .container p {
@@ -157,6 +183,24 @@ body {
     /* font-size: 30px; */
     display: flex;
     text-align: center;
+  }
+
+  .team-images {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+  }
+
+  .team-images p {
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .team-images img {
+    width: 150px; /* Adjust the size of the circular images */
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20%; /* Make the images circular */
   }
 
   .image-gallery {
@@ -184,7 +228,7 @@ body {
 
 .menu {
     background-color: transparent; /* Set background color */
-    padding: 30px 0; /* Add padding to create separation line */
+    padding: 20px 0; /* Add padding to create separation line */
   }
   
   .menu {
@@ -257,6 +301,10 @@ body {
     color: rgb(61, 61, 61);
     /*text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);*/
     /*filter: contrast(0.8);*/
+  }
+
+  .subblock p {
+    font-size: 16pt;
   }
 
   .banner {
@@ -347,7 +395,7 @@ body {
       max-width: 60%; /* Set the absolute max width for screens larger than 1200px */
     }
     .container h1 {
-      font-size: 100px; /* Font size for screens larger than 1024px */
+      font-size: 60px; /* Font size for screens larger than 1024px */
     }
 }
 
