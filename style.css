@@ -59,11 +59,14 @@ body {
     left: 0px;
     right: 10px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Set the background color */
+    background-color: rgba(255, 255, 255, 0.0); /* Set the background color */
     z-index: 999;
     padding-top: 0px; /* Add some padding */
     text-align: right;
     top: 0;
+  }
+  header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   footer {
@@ -72,7 +75,7 @@ body {
     margin-bottom: 5%;
     text-align: left;
     padding-top: 100px; /* Add spacing at the top */
-    color: var(--highlight-color);
+    color: var(--highlight-color); 
   }
 
   .line {
@@ -105,7 +108,7 @@ body {
   }
 
   .parallax-section {
-    min-height: 90vh; /* Set a minimum height to ensure full viewport coverage */
+    min-height: 50vh; /* Set a minimum height to ensure full viewport coverage */
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -130,6 +133,10 @@ body {
     background-color: rgb(235, 235, 235);
   }
 
+  .parallax-section-banner {
+    min-height: 90vh;
+  }
+
   .parallax-section:first-child h1 {
     color: var(--hover-color-light); /* Change the color of the h1 element */
   }
@@ -137,7 +144,6 @@ body {
   .parallax-section:first-child p {
     color: black; /* Change the color of the p element */
   }
-  
   
   .container {
     max-width: 90%;
@@ -233,7 +239,7 @@ body {
   
   .menu {
     text-align: right;
-    border-bottom: 2px solid var(--highlight-color); /* Add blue separation line */
+    /*border-bottom: 2px solid var(--highlight-color); /* Add blue separation line */
   }
 
   .menu-icon {
@@ -254,7 +260,7 @@ body {
   .menu a {
     text-decoration: none;
     font-size: 20px;
-    color: #333;
+    color:white;/* #333;*/
     padding: 5px 10px;
   }
 
@@ -311,8 +317,8 @@ body {
     position: absolute;
     top: 0%;
     transform: translateY(0%);
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 70%;
     height: 100%;
     z-index: -1;
     overflow: hidden;
@@ -325,8 +331,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1;
     /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%),
                 linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 110%);*/
   }
@@ -335,8 +343,25 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scaleX(-1);
   }
-  
+
+  .container-banner {
+    position: absolute;
+    left: 0;
+    width: 30%; /* Occupy the left half of the screen */
+    height: 85%;
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black background */
+    color: white;
+    z-index: 1; /* Ensure the text stays above the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*border-radius: 10px; /* Add rounded corners */
+  }
+
   .contact-form {
     max-width: 60%;
     margin: 0 auto;
