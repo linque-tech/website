@@ -191,6 +191,37 @@ body {
     text-align: center;
   }
 
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 20px; /* Add space between the grid items */
+    padding: 20px;
+  }
+  
+  .grid-item {
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for each section */
+    border-radius: 0px; /* Rounded corners */
+  }
+  
+  .grid-item h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .grid-item p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0px; /* Rounded corners for the images */
+  }
+
   .team-images {
     display: flex;
     justify-content: center;
@@ -426,6 +457,10 @@ body {
 
   /* Styles for smaller screens */
 @media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on top of each other in one column */
+  }
+
   .container p{
     font-size: 16px;
   }
